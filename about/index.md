@@ -22,16 +22,9 @@ type: about
   </div>
 
   <div class="site-state-item">
-        <a href="{{ site.linkedin }}" rel="alternate" style="color: #DC143C">
-          <i class="fa fa-linkedin-square fa-2x"></i><br>
-          Linkedin
-        </a>
-  </div>
-
-  <div class="site-state-item">
-        <a href="{{ site.facebook }}" rel="alternate" style="color: #DC143C">
-          <i class="fa fa-facebook-square fa-2x"></i><br>
-          Facebook
+        <a href="{{ site.instagram }}" rel="alternate" style="color: #DC143C">
+          <i class="fa fa-instagram-square fa-2x"></i><br>
+          instagram
         </a>
   </div>
 
@@ -39,18 +32,13 @@ type: about
 </nav>
 
 ### Profile :
-B.S. in Biomedical Engineering, <a href="http://www.korea.ac.kr" target="_blank">Korea Univ.</a><br>
-intelligent Bio-MEMS Laboratory (iBML)<br><br>
 [Present]<br>
-MS&Ph.D Integration Course in Computer Engineering, <a href="http://www.korea.ac.kr" target="_blank">Korea Univ.</a><br>
-Data Mining and Imformation Systems Laboratory (DMIS)
+B.S. in Computer Science, <a href="http://www.korea.ac.kr" target="_blank">Korea Univ.</a><br>
 
 ### Interests : 
-Machine Learning, Deep Learning, Biomedical Engineering, Computer Vision, Signal Proccessing
+Machine Learning, Deep Learning, Computer Vision, Reinforcement Learning
 
 ### Contact :
 E-mail :<br>
-ljhyun33@korea.ac.kr<br>
-leejhyun33@gmail.com<br>
-Wechat ID : Ant_LJH<br>
-![wechatcode](/assets/img/wechatcode.png)
+gustmd8211@naver.com<br>
+gustmd8211@gmail.com<br>
