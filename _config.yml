@@ -232,7 +232,7 @@ font:
 
 github:              https://github.com/mynsng/
 
-instagram:           https://www.facebook.com/leejunhyunkorea
+instagram:           https://www.instagram.com/mynsng
 
 
 # Sidebar Avatar
@@ -242,10 +242,10 @@ avatar: /assets/avatar.png
 
 # Table Of Contents in the Sidebar
 toc:
-  enable: false
+  enable: true
 
   # Automatically add list number to toc.
-  number: false
+  number: true
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
@@ -268,8 +268,8 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
-  #display: always
+  #display: post
+  display: always
   #display: hide
   #display: remove
 
