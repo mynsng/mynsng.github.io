@@ -23,7 +23,7 @@ type: about
 
   <div class="site-state-item">
         <a href="{{ site.instagram }}" rel="alternate" style="color: #DC143C">
-          <i class="fa fa-instagram-square fa-2x"></i><br>
+          <i class="fa fa-facebook-square fa-2x"></i><br>
           instagram
         </a>
   </div>
