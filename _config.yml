@@ -230,8 +230,7 @@ font:
 #  Twitter: twitter
 #  Weibo: weibo
 
-github:
-  repo:             https://github.com/mynsng/
+github:              https://github.com/mynsng/
 
 instagram:           https://www.facebook.com/leejunhyunkorea
 
@@ -261,8 +260,8 @@ toc:
 
 sidebar:
   # Sidebar Position, available value: left | right
-  #position: left
-  position: right
+  position: left
+  #position: right
 
   # Sidebar Display, available value:
   #  - post    expand on posts automatically. Default.
