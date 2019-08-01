@@ -230,7 +230,8 @@ font:
 #  Twitter: twitter
 #  Weibo: weibo
 
-github:              https://github.com/mynsng/
+github:              
+  repo:              https://github.com/mynsng/
 
 instagram:           https://www.instagram.com/mynsng
 
