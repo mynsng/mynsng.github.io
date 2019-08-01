@@ -15,7 +15,7 @@ type: about
   </div>
 
   <div class="site-state-item">
-        <a href="{{ site.github }}" rel="alternate" style="color: #DC143C">
+        <a href="{{ site.github.repo }}" rel="alternate" style="color: #DC143C">
           <i class="fa fa-github fa-2x"></i><br>
           Github
         </a>
