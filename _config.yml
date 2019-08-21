@@ -386,9 +386,9 @@ han: false
 
 # Disqus
 disqus: 
-  enable: false
-  shortname: hyunseung-blog
-  count: false
+  enable: True
+  shortname: mynsng
+  count: True
   # hide comments (visitors need to click to load the comments)
   # count need to be false when hide is true
   hide: false
