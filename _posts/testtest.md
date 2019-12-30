@@ -1,8 +1,12 @@
 ---
 layout: post
-title:  "시계열 예측을 위한 Facebook Prophet 사용하기"
-categories: data
-tags: time-series
+title: 'test'
+categories:
+  - test
+tags:
+  - deep learning
+  - reinforcement learning
+  - project detail
 ---
 
 - 페이스북이 만든 시계열 예측 라이브러리 Prophet 사용법에 대해 작성한 글입니다
