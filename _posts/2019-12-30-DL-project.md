@@ -12,7 +12,7 @@ tags:
 고려대학교 김현우 교수님의 딥러닝 수업 때 진행한 프로젝트를 정리한 포스트입니다.
 
 * [ICML format report](/assets/pdf/PHYRE_report.pdf)
-* [presentation slide](/assets/pdf/PHYRE_presentation)
+* [presentation slide](/assets/pdf/PHYRE_presentation.pdf)
 
 ### Abstract
 사람은 처음 본 상황에서도 자신이 어떤 행동을 해야 하는지 알 수 있다. 이전의 경험들로부터 **physical concept** 를 알아냈기 때문이다. 우리는 이러한 능력을 agent에게도 부여하고 싶었다. 그래서 Facebook에서 공개한 [PHYRE](https://phyre.ai/)를 사용하였다. 이 곳에는 물리학적 특성을 기반으로 한 퍼즐들이 존재한다. 우리의 목적은 agent가 **physical concept** 를 이해해서 학습시에 보지 못했던 task에서도 좋은 성능을 낼 수 있도록 하는 것이다.
