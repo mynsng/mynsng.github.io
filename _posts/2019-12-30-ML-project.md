@@ -21,7 +21,6 @@ tags:
 ### Method
 기본적인 Baseline은 **DQN** 과 **A2C** 를 사용하였다. 두가지 모두 논문을 보고 재구현하였고 atari pong이 아닌 스트리트 파이터에 적용하기 위해서 Preprocessing, action space 등 여러가지 부분을 수정하였다. 첫번째 목표는 한가지 캐릭터를 완벽히 이기는 것이었다. 바이슨이라는 캐릭터를 골랐고 학습 결과 easy는 완벽하게 이길 수 있었지만 normal에게는 그렇지 못한 결과를 확인 할 수 있었다.  
 그래서 normal level에서도 완벽하게 이기기 위해서 **curriculum learning** 을 사용하였다. A2C는 DQN과 다르게 여러개의 actor가 병렬적으로 학습을 하기 때문에 이 장점을 사용하였다. A2C의 actor를 12개로 설정하고 학습 초기에는 12개의 actor 모두 easy level, 중반에는 6개 easy, 6개 normal, 후반에는 12개 모두 normal level로 학습을 하였다. 그 결과 normal level도 완벽하게 이길 수 있었다.  
-영상추가  
 한가지 캐릭터를 완벽히 이긴 다음 목표는 12가지 캐릭터를 모두 이기는 것이었다. General 한 agent를 만들기 위해 A2C의 장점을 다시 사용하여 12개의 actor에 12가지 캐릭터를 배정하였다. 학습결과 agent가 상대방 캐릭터를 구별하지 못하고 모두에게 같은 policy를 학습하는 것을 확인할 수 있었다. 그래서 단거리 공격을 하는 다른 캐릭터와는 달리 장거리 공격을 하는 달심이라는 캐릭터에게 무참히 패배하였다.  
 이 문제를 해결하기 위해서 구상한 모델은 **A2C3(Advantage Actor Critic + Character Classify)** 이다. 모델 구성은 다음과 같다.
 ![MLproject-02](/assets/img/project/ML/A2C3.png)   
