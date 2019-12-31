@@ -28,10 +28,10 @@ type: about
 [Present]<br>
 B.S. in Computer Science, <a href="http://www.korea.ac.kr" target="_blank">Korea Univ.</a><br>
 
-### Interests : 
-Machine Learning, Deep Learning, Computer Vision, Reinforcement Learning
+### Interests :
+Reinforcement Learning, Deep Learning, Machine Learning, Computer Vision
 
 ### Contact :
-E-mail :<br>
+E-mail :
 gustmd8211@naver.com<br>
-gustmd8211@gmail.com<br>
+gustmd8211@korea.ac.kr<br>
