@@ -48,6 +48,9 @@ highlight:
 markdown: kramdown
 kramdown:
     input: GFM
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
 # Default Attributes
 ## Docs: https://jekyllrb.com/docs/configuration/#front-matter-defaults
@@ -230,7 +233,7 @@ font:
 #  Twitter: twitter
 #  Weibo: weibo
 
-github:              
+github:
   repo:              https://github.com/mynsng/
 
 instagram:           https://www.instagram.com/mynsng
@@ -376,7 +379,7 @@ mathjax:
 han: false
 
 # Swiftype Search API Key
-#swiftype_key: 
+#swiftype_key:
 
 # Baidu Analytics ID
 #baidu_analytics:
@@ -385,7 +388,7 @@ han: false
 #duoshuo_shortname:
 
 # Disqus
-disqus: 
+disqus:
   enable: True
   shortname: mynsng
   count: True
