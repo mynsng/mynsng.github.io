@@ -2,6 +2,20 @@
 <!DOCTYPE html>
 <html>
 
+<style>
+    .row {
+        margin-bottom: 30px; /* Add 20 pixels of space below each row */
+    }
+ </style>
+ 
+ <style>
+    .fixed-size-gif {
+        width: 270px; /* Set the desired width of the GIF */
+        height: 270px; /* Set the desired height of the GIF */
+    }
+</style>
+
+
 <head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -95,20 +109,235 @@
                     <ul class="nav nav-pills nav-justified">
                         <li>
                             <a href="https://arxiv.org/abs/2310.20178">
-                            <image src="img/zip_paper_image.jpg" height="60px">
+                            <image src="img/disco_paper.png" height="60px">
                                 <h4><strong>Paper</strong></h4>
                             </a>
                         </li>
-                        <!-- <li>
-                            <a href="https://www.youtube.com/watch?v=xrrhynRzC8k">
+                        <li>
+                            <a href="https://neurips.cc/virtual/2023/poster/72467">
                             <image src="img/youtube_icon.png" height="60px">
                                 <h4><strong>Video</strong></h4>
                             </a>
-                        </li> -->
+                        </li>
                     </ul>
                 </div>
         </div>
 
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 class="text-center"> Abstract</h2>
+                <p style="text-align: left;"></p>
+                    In the field of unsupervised skill discovery (USD), a major challenge is limited exploration, primarily due to substantial penalties when skills deviate from their initial trajectories. To enhance exploration, recent methodologies employ auxiliary rewards to maximize the epistemic uncertainty or entropy of states. However, we have identified that the effectiveness of these rewards declines as the environmental complexity rises. Therefore, we present a novel USD algorithm, skill discovery with guidance (DISCO-DANCE), which (1) selects the guide skill that possesses the highest potential to reach unexplored states, (2) guides other skills to follow guide skill, then (3) the guided skills are dispersed to maximize their discriminability in unexplored states. Empirical evaluation demonstrates that DISCO-DANCE outperforms other USD baselines in challenging environments, including two navigation benchmarks and a continuous control benchmark. Qualitative visualizations and code of DISCO-DANCE are available at https://mynsng.github.io/discodance/.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <h2>DISCO-DANCE Overview</h2>
+                <video width="560" height="560" controls>
+                    <source src="img/disco-overview.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">Qualitative Results (2D maze)</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <img src="img/y_maze.gif" alt="Result 1" class="img-responsive">
+                <h4 class="text-center">Y maze</h4>
+            </div>
+            <div class="col-md-3">
+                <img src="img/w_maze.gif" alt="Result 2" class="img-responsive">
+                <h4 class="text-center">W maze</h4>
+            </div>
+            <div class="col-md-3">
+                <img src="img/s_maze.gif" alt="Result 3" class="img-responsive">
+                <h4 class="text-center">S maze</h4>
+            </div>
+            <div class="col-md-3">
+                <img src="img/bottleneck_maze.gif" alt="Result 4" class="img-responsive">
+                <h4 class="text-center">Bottleneck maze</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">Qualitative Results (Ant maze)</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Content Section 1 -->
+            <div class="col-md-6">
+                <h3 class="text-center">Ant U-maze</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/antu_pretrain.gif" alt="Result 1" class="fixed-size-gif">
+                        <h4 class="text-center">Unsupervised Pretraining</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/antu_finetune.gif" alt="Result 2" class="fixed-size-gif">
+                        <h4 class="text-center">Goal-reaching Finetuning</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content Section 2 -->
+            <div class="col-md-6">
+                <h3 class="text-center">Ant Pi-maze</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/antmaze_pretrain.gif" alt="Result 3" class="fixed-size-gif">
+                        <h4 class="text-center">Unsupervised Pretraining</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/antmaze_finetune.gif" alt="Result 4" class="fixed-size-gif">
+                        <h4 class="text-center"> Goal-reaching Finetuning</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">Qualitative Results (DMC)</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Content Section 1 -->
+            <div class="col-md-6">
+                <h3 class="text-center">Cheetah: Run</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/cheetah_run_zeroshot.gif" alt="Result 1" class="fixed-size-gif">
+                        <h4 class="text-center">Unsupervised Pretraining</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/cheetah_run_finetune.gif" alt="Result 2" class="fixed-size-gif">
+                        <h4 class="text-center">Task-specific Finetuning</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content Section 2 -->
+            <div class="col-md-6">
+                <h3 class="text-center">Cheetah: Run backward</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/cheetah_backward_zeroshot.gif" alt="Result 3" class="fixed-size-gif">
+                        <h4 class="text-center">Unsupervised Pretraining</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/cheetah_backward_finetune.gif" alt="Result 4" class="fixed-size-gif">
+                        <h4 class="text-center"> Task-specific Finetuning</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Content Section 1 -->
+            <div class="col-md-6">
+                <h3 class="text-center">Cheetah: Flip</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/cheetah_flip_zeroshot.gif" alt="Result 1" class="fixed-size-gif">
+                        <h4 class="text-center">Unsupervised Pretraining</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/cheetah_flip_finetune.gif" alt="Result 2" class="fixed-size-gif">
+                        <h4 class="text-center">Task-specific Finetuning</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content Section 2 -->
+            <div class="col-md-6">
+                <h3 class="text-center">Cheetah: Flip backward</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/cheetah_backflip_zeroshot.gif" alt="Result 3" class="fixed-size-gif">
+                        <h4 class="text-center">Unsupervised Pretraining</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/cheetah_backflip_finetune.gif" alt="Result 4" class="fixed-size-gif">
+                        <h4 class="text-center"> Task-specific Finetuning</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Content Section 1 -->
+            <div class="col-md-6">
+                <h3 class="text-center">Quadruped: Stand</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/quadruped_stand_zeroshot.gif" alt="Result 1" class="fixed-size-gif">
+                        <h4 class="text-center">Unsupervised Pretraining</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/quadruped_stand_finetune.gif" alt="Result 2" class="fixed-size-gif">
+                        <h4 class="text-center">Task-specific Finetuning</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content Section 2 -->
+            <div class="col-md-6">
+                <h3 class="text-center">Quadruped: Walk</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/quadruped_walk_zeroshot.gif" alt="Result 3" class="fixed-size-gif">
+                        <h4 class="text-center">Unsupervised Pretraining</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/quadruped_walk_finetune.gif" alt="Result 4" class="fixed-size-gif">
+                        <h4 class="text-center"> Task-specific Finetuning</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Content Section 1 -->
+            <div class="col-md-6">
+                <h3 class="text-center">Quadruped: Run</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/quadruped_run_zeroshot.gif" alt="Result 1" class="fixed-size-gif">
+                        <h4 class="text-center">Unsupervised Pretraining</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/quadruped_run_finetune.gif" alt="Result 2" class="fixed-size-gif">
+                        <h4 class="text-center">Task-specific Finetuning</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content Section 2 -->
+            <div class="col-md-6">
+                <h3 class="text-center">Quadruped: Jump</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/quadruped_jump_zeroshot.gif" alt="Result 3" class="fixed-size-gif">
+                        <h4 class="text-center">Unsupervised Pretraining</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/quadruped_jump_finetune.gif" alt="Result 4" class="fixed-size-gif">
+                        <h4 class="text-center"> Task-specific Finetuning</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 <!--         <div class="row">
