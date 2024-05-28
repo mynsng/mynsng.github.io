@@ -81,7 +81,7 @@ tr,
 p,
 a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 14px
 }
 
 strong {
@@ -89,22 +89,18 @@ strong {
   font-size: 14px;
 }
 
-h2 {
-  margin: 0;
-  font-weight: normal;
+heading {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
 }
 
-.papertitle {
+papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 700
 }
 
-.name {
-  padding-top: 20px;
-  margin: 0;
+name {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
 }
@@ -133,3 +129,107 @@ h2 {
 span.highlight {
   background-color: #ffffd0;
 }
+
+.highlight {
+    background-color: #ffffd0;
+  }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 800px;
+}
+
+.personal-photo{
+  width: 90%;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+  clip-path: circle();
+}
+
+.institute-logo-small{
+  width: 100px;
+}
+
+.institute-logo-medium{
+    width: 120px;
+  }
+
+.paper-images{
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+@media screen and (max-width: 576px) {
+  .personal-photo{
+    width: 80%;
+    max-width: 200px;
+    margin: auto;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .paper-images{
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+
+.left-column{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.right-column{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.personal-column{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name-column{
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.common-rows {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.section-heading-rows {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.custom-col-sm-3 {
+    flex: 0 0 25%; 
+    max-width: 22%;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 576px) {
+    .custom-col-sm-3{
+      width: 100%;
+      max-width: 300px;
+      margin: auto;
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
