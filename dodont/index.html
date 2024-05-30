@@ -1,0 +1,476 @@
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-96CCSDGHTX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-96CCSDGHTX');
+    </script>
+
+    <title>Do's and Don'ts</title>
+
+    <meta name="author" content="Hyunseung Kim">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <base target="_blank">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../stylesheet.css">
+    <link rel="stylesheet" href="css/app.css?v=20230203">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon/favicon-16x16.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                <b>Do's and Don'ts</b>: Learning Desirable Skills with Instruction Videos</br> 
+                <small>
+                Arxiv Preprint
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://mynsng.github.io/">
+                          Hyunseung Kim
+                        </a>
+                    </li>
+                    <li>
+                        Byungkun Lee
+                    </li>
+                    <li>
+                        <a href="https://joonleesky.github.io/">
+                          Hojoon Lee
+                        </a>
+                    </li>
+                    <li>
+                        Dongyoon Hwang
+                    </li>
+                    <li>
+                        Donghu Kim
+                    </li>
+                    <li>
+                        <a href="https://sites.google.com/site/jaegulchoo/">
+                          Jaegul Choo
+                        </a>
+                    </li>
+                    </br>KAIST
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/abs/2310.20178">
+                            <image src="img/disco_paper.png" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://neurips.cc/virtual/2023/poster/72467">
+                            <image src="img/youtube_icon.png" height="60px">
+                                <h4><strong>Video</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/dojeon-ai/DISCO-DANCE">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div> -->
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>
+                    <span class="font-weight-normal">Abstract</span>
+                </h2>
+                <br>
+                <p class="text-justify">
+                    Unsupervised skill discovery is a learning paradigm that aims to acquire diverse behaviors without explicit rewards. 
+                    However, it faces challenges in learning complex behaviors and often leads to learning unsafe or undesirable behaviors. 
+                    For instance, in various continuous control tasks, current unsupervised skill discovery methods succeed in learning basic locomotions like standing but struggle with learning more complex movements such as walking and running. 
+                    Moreover, they may acquire unsafe behaviors like tripping and rolling or navigate to undesirable locations such as pitfalls or hazardous areas. 
+                    In response, we present <b>DoDont</b>(Do’s and Dont’s), an instruction-based skill discovery algorithm composed of two stages. 
+                    First, in instruction learning stage, DoDont leverages action-free instruction videos to train an instruction network to distinguish desirable transitions from undesirable ones. 
+                    Then, in the skill learning stage, the instruction network adjusts the reward function of the skill discovery algorithm to weight the desired behaviors. 
+                    Specifically, we integrate the instruction network into a distance-maximizing skill discovery algorithm, where the instruction network serves as the distance function. 
+                    Empirically, with less than 8 instruction videos, DoDont effectively learns desirable behaviors and avoids undesirable ones across complex continuous control tasks.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>
+                    <span class="font-weight-normal">Motivation</span>
+                </h2>
+            </div>
+            <div class="col-md-12">
+                <h3>
+                    <span class="font-weight-normal">Is the <b>purely unsupervised</b> assumption of unsupervised RL ideal in the real-world?</span>
+                </h3>
+            </div>
+            <div class="col-md-12">
+                <br>
+                <div class="vertical-align">
+                    <div class="col-md-3">
+                        <p>
+                            <video class="center-block" width="100%" autoplay loop muted controls playsinline>
+                                <source src="img/diayn_motivation.mp4" type="video/mp4">
+                            </video>
+                        </p>
+                        <h4 class="text-center top5 bottom5">
+                            <b>DIAYN</b>
+                        </h4>
+                    </div>
+                    <div class="col-md-3">
+                    <!-- <div class="col-md-3"> -->
+                        <p>
+                            <video class="center-block" width="100%" autoplay loop muted controls playsinline>
+                                <source src="img/lsd_motivation.mp4" type="video/mp4">
+                            </video>
+                        </p>
+                        <h4 class="text-center top5 bottom5">
+                            <b>LSD</b>
+                        </h4>
+                    </div>
+                    <div class="col-md-3">
+                        <p>
+                            <video class="center-block" width="100%" autoplay loop muted controls playsinline>
+                                <source src="img/rnd_motivation.mp4" type="video/mp4">
+                            </video>
+                        </p>
+                        <h4 class="text-center top5 bottom5">
+                            <b>RND</b>
+                        </h4>
+                    </div>
+                    <div class="col-md-3">
+                    <!-- <div class="col-md-3"> -->
+                        <p>
+                            <video class="center-block" width="100%" autoplay loop muted controls playsinline>
+                                <source src="img/metra_motivation.mp4" type="video/mp4">
+                            </video>
+                        </p>
+                        <h4 class="text-center top5 bottom5">
+                            <b>METRA</b>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <p class="text-justify">
+                Despite notable advancements in unsupervised skill discovery (USD) algorithms, acquiring diverse policies in enviornments with large state and action spaces remains a significant challenge. 
+                </p>
+                <p class="text-justify">
+                Two major issues arise when training agents with USD in these complex enviornments.
+                <ul>
+                    <li>
+                        First, since the vast state and action spaces enable the agent to develop a wide variety of behaviors, learning <b>simple behaviors</b> like standing may be feasible (e.g., DIAYN, LSD), 
+                        but mastering complex behaviors such as walking or running can take an exceedingly long time.
+                    </li>
+                    <li>
+                        Second, agent can develop <b>undesirable and risky behaviors</b> during training, such as tripping, or rolling (e.g., RND, METRA).
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>
+                    <span class="font-weight-normal">Method Overview</span>
+                </h2>
+            </div>
+            <div class="col-md-12">
+                <p class="text-justify">
+                To address these challenges, we propose <b>DoDont</b>, a skill discovery algorithm that integrates USD objectives with intended behavioral goals. Instead of relying on a hand-designed reward, DoDont <i>learns a reward function from a small set of instruction videos</i> that demonstrate desirable and undesirable behaviors. 
+                <br><br>
+                DoDont consists of two stages.
+                </p>
+                    <div class="col-md-12">
+                        <p>
+                            <img src="img/DoDont_project_page.png" style="width:100%;">
+                        </p>
+                    </div>
+                <p class="text-justify">
+                <b>Stage 1. Train instruction network with instruction videos </b> <br>
+                DoDont starts by collecting instruction videos of desirable (Do's) and undesirable behaviors (Don'ts). <br>
+                We then train an instruction network which assigns higher values to desirable behaviors and lower values to undesirable ones.
+                </p>
+
+            </p>
+            <p class="text-justify">
+            <b>Stage 2. Skill learning with instruction network </b> <br>
+            We integrate the learned instructioin network into the online distance-maximizing skill discovery algorithm. <br>
+            We set the trained instruction network as the distance metric in the distance-maximizing skill discovery framework.
+            </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>
+                    <span class="font-weight-normal">Objective function of DoDont</span>
+                </h2>
+            </div>
+            <div class="col-md-12">
+            <p class="text-justify">
+            <h3 class="text-center desktop-only">
+                $$\begin{aligned}
+                \text{Maximize} \ \ r(s, z, s') = \hat{p}_{\psi}(s, s')(\phi(s') - \phi(s))^\top z \quad
+                \text{s.t.} \ \ \|\phi(s) - \phi(s')\|_2 \leq 1.
+                \end{aligned}$$
+            </h3>
+            <p class="text-justify">
+                This equation represents the final objective of DoDont. Essentially, this can be interpreted as simply multiplying instruction network \(\hat{p}_{\psi}\) to the original learning objective function of METRA. For a detailed derivation, please refer to the main paper.
+            </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>
+                    <span class="font-weight-normal">Locomotion results</span>
+                </h2>
+            </div>
+            <div class="col-md-12">
+                <br>
+                <div class="vertical-align">
+                    <div class="col-md-3">
+                        <p>
+                            <img class="img-responsive center-block" src="img/DoDont_Quadruped.png">
+                        </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p>
+                            <video class="center-block" width="100%" autoplay loop muted controls playsinline>
+                                <source src="img/DoDont_Quadruped.mp4" type="video/mp4">
+                            </video>
+                        </p>
+                    </div>
+                </div>
+                <h4 class="text-center top5 bottom5">
+                    <b>DoDont</b> (4-D skills, 2 rollouts each for 9 randomly sampled skills)
+                </h4>
+                <h5 class="text-center top5 bottom5">
+                    (Do's: 4 run videos, Don'ts: 4 random action videos)
+                </h5>
+            </div>
+
+            <div class="col-md-12">
+                <br>
+                <div class="vertical-align">
+                    <div class="col-md-3">
+                        <p>
+                            <img class="img-responsive center-block" src="img/only_one_plot.jpeg">
+                        </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p>
+                            <video class="center-block" width="100%" autoplay loop muted controls playsinline>
+                                <source src="img/DoDont_only_one.mp4" type="video/mp4">
+                            </video>
+                        </p>
+                    </div>
+                </div>
+                <h4 class="text-center top5 bottom5">
+                    <b>DoDont (One video)</b> (4-D skills, 2 rollouts each for 9 randomly sampled skills)
+                </h4>
+                <h5 class="text-center top5 bottom5">
+                    (Do's: one run video, Don'ts: one random action video)
+                </h5>
+            </div>
+
+            <div class="col-md-12">
+                <br>
+                <div class="vertical-align">
+                    <div class="col-md-3">
+                        <p>
+                            <img class="img-responsive center-block" src="img/METRA_Quadruped.png">
+                        </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p>
+                            <video class="center-block" width="100%" autoplay loop muted controls playsinline>
+                                <source src="img/metra_quadruped.mp4" type="video/mp4">
+                            </video>
+                        </p>
+                    </div>
+                </div>
+                <h4 class="text-center top5 bottom5">
+                    <b>METRA</b> (4-D skills, 2 rollouts each for 9 randomly sampled skills)
+                </h4>
+            </div>
+
+            <div class="col-md-12">
+                <br>
+                <div class="vertical-align">
+                    <div class="col-md-3">
+                        <p>
+                            <img class="img-responsive center-block" src="img/metra_dagger_plot.jpeg">
+                        </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p>
+                            <video class="center-block" width="100%" autoplay loop muted controls playsinline>
+                                <source src="img/metra_dagger_quadruped.mp4" type="video/mp4">
+                            </video>
+                        </p>
+                    </div>
+                </div>
+                <h4 class="text-center top5 bottom5">
+                    <b>METRA\(\dagger\) (using task reward)</b> (4-D skills, 2 rollouts each for 9 randomly sampled skills)
+                </h4>
+            </div>
+
+            <div class="col-md-12">
+                <br>
+                <div class="vertical-align">
+                    <div class="col-md-3">
+                        <p>
+                            <img class="img-responsive center-block" src="img/smerl_plot.jpeg">
+                        </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p>
+                            <video class="center-block" width="100%" autoplay loop muted controls playsinline>
+                                <source src="img/smerl_quadruped.mp4" type="video/mp4">
+                            </video>
+                        </p>
+                    </div>
+                </div>
+                <h4 class="text-center top5 bottom5">
+                    <b>SMERL</b> (16-D skills, 2 rollouts each for 9 randomly sampled skills)
+                </h4>
+            </div>
+
+            <div class="col-md-12">
+                <br>
+                <div class="vertical-align">
+                    <div class="col-md-3">
+                        <p>
+                            <img class="img-responsive center-block" src="img/dgpo_plot.jpeg">
+                        </p>
+                    </div>
+                    <div class="col-md-9">
+                        <p>
+                            <video class="center-block" width="100%" autoplay loop muted controls playsinline>
+                                <source src="img/DGPO_quadruped.mp4" type="video/mp4">
+                            </video>
+                        </p>
+                    </div>
+                </div>
+                <h4 class="text-center top5 bottom5">
+                    <b>DGPO</b> (16-D skills, 2 rollouts each for 9 randomly sampled skills)
+                </h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2>
+                    <span class="font-weight-normal">Manipulation results</span>
+                </h2>
+            </div>
+            <div class="col-md-12">
+                <p>
+                    <video class="center-block" width="80%" autoplay loop muted controls playsinline>
+                        <source src="img/DoDont_kitchen.mp4" type="video/mp4">
+                    </video>
+                </p>
+                <h4 class="text-center top5 bottom5">
+                    <b>DoDont</b> (24 skills, 2 rollouts each)
+                </h4>
+                <h5 class="text-center top5 bottom5">
+                    (Do's: D4RL kitchen dataset, Don'ts: Random action videos)
+                </h5>
+            </div>
+
+            <div class="col-md-12">
+                <p>
+                    <video class="center-block" width="80%" autoplay loop muted controls playsinline>
+                        <source src="img/METRA_kitchen.mp4" type="video/mp4">
+                    </video>
+                </p>
+                <h4 class="text-center top5 bottom5">
+                    <b>METRA</b> (24 skills, 2 rollouts each)
+                </h4>
+
+            </div>
+
+            <div class="col-md-12">
+                <p>
+                    <video class="center-block" width="80%" autoplay loop muted controls playsinline>
+                        <source src="img/metra_dagger_kitchen.mp4" type="video/mp4">
+                    </video>
+                </p>
+                <h4 class="text-center top5 bottom5">
+                    <b>METRA\(\dagger\) (using task reward)</b> (24 skills, 2 rollouts each)
+                </h4>
+            </div>
+
+            <div class="col-md-12">
+                <p>
+                    <video class="center-block" width="80%" autoplay loop muted controls playsinline>
+                        <source src="img/smerl_kitchen.mp4" type="video/mp4">
+                    </video>
+                </p>
+                <h4 class="text-center top5 bottom5">
+                    <b>SMERL</b> (24 skills, 2 rollouts each)
+                </h4>
+            </div>
+
+            <div class="col-md-12">
+                <p>
+                    <video class="center-block" width="80%" autoplay loop muted controls playsinline>
+                        <source src="img/dgpo_kitchen.mp4" type="video/mp4">
+                    </video>
+                </p>
+                <h4 class="text-center top5 bottom5">
+                    <b>DGPO</b> (24 skills, 2 rollouts each)
+                </h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+                <p class="text-justify">
+                    The website template was borrowed from <a href="http://seohong.me/">Seohong Park</a> and <a href="https://jonbarron.info/">Jon Barron</a>.
+                </p>
+            </div>
+        </div>
+
+
+    
+</body>
+</html>
