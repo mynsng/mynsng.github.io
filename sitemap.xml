@@ -1,22 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://mynsng.github.io/</loc>
         <lastmod>2024-06-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://mynsng.github.io/dodont</loc>
+        <loc>https://mynsng.github.io/dodont/</loc>
         <lastmod>2024-06-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://mynsng.github.io/discodance</loc>
+        <loc>https://mynsng.github.io/discodance/</loc>
         <lastmod>2024-06-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
     </url>
-    <!-- Add more URLs for other pages on your site -->
 </urlset>

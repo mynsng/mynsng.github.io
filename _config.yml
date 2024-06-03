@@ -1,7 +1,0 @@
-title: mynsng's blog
-email: mynsng@kaist.ac.kr
-description: >- # this means to ignore newlines until "baseurl:"
-  This is my personal blog.
-baseurl: "https://mynsng.github.io" # the subpath of your site, e.g., /blog
-url: "https://mynsng.github.io" # the base hostname & protocol for your site
-github_username: mynsng
