@@ -265,6 +265,19 @@ span.highlight {
   background-color: #adadad;
 }
 
+/* Must stay after the base .news-scroll rules: a media query adds no
+   specificity, so an earlier block would lose to them.
+   Entries wrap to two lines at this width, so the 6em box would show 2 of 8 --
+   and mobile overlay scrollbars never render, leaving no hint of the rest.
+   Drop the scroll box and let the page scroll instead. */
+@media screen and (max-width: 576px) {
+  .news-scroll {
+    max-height: none;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+}
+
 .custom-col-sm-3 {
     flex: 0 0 25%; 
     max-width: 22%;
