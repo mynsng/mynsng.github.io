@@ -188,12 +188,20 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="row section-heading-rows">
+  <div class="container" id="publications">
+    <div class="row section-heading-rows pub-heading">
       <h4>Publications</h4>
+      <span class="pub-toggle">
+        <button type="button" data-view="selected">Selected</button>
+        /
+        <button type="button" data-view="all">All</button>
+      </span>
+    </div>
+    <div class="row">
+      <p class="pub-note">Selected: first, co-first, or corresponding author.</p>
     </div>
 
-    <div class="row common-rows" style="margin-top: 3%">
+    <div class="row common-rows pub pub-selected" style="margin-top: 3%">
       <div class="col-xs-12 custom-col-sm-3 left-column">
         <img src="images/pubgally.jpg" alt="pubgally" class="paper-images">
       </div>
@@ -216,7 +224,7 @@
       </div>
     </div>
 
-    <div class="row common-rows" style="margin-top: 3%">
+    <div class="row common-rows pub pub-selected" style="margin-top: 3%">
       <div class="col-xs-12 custom-col-sm-3 left-column">
         <img src="images/bialign2026safety.jpg" alt="bialign2026safety" class="paper-images">
       </div>
@@ -237,7 +245,7 @@
       </div>
     </div>
 
-    <div class="row common-rows" style="margin-top: 3%">
+    <div class="row common-rows pub pub-selected" style="margin-top: 3%">
       <div class="col-xs-12 custom-col-sm-3 left-column">
         <img src="images/bialign2026eval.gif" alt="bialign2026eval" class="paper-images">
       </div>
@@ -260,7 +268,7 @@
       </div>
     </div>
 
-    <div class="row common-rows" style="margin-top: 3%">
+    <div class="row common-rows pub" style="margin-top: 3%">
       <div class="col-xs-12 custom-col-sm-3 left-column">
         <img src="images/wacv2027afo.jpg" alt="wacv2027afo" class="paper-images">
       </div>
@@ -283,7 +291,7 @@
       </div>
     </div>
 
-    <div class="row common-rows" style="margin-top: 3%">
+    <div class="row common-rows pub" style="margin-top: 3%">
       <div class="col-xs-12 custom-col-sm-3 left-column">
         <img src="images/iros2026hamster.gif" alt="iros2026hamster" class="paper-images">
       </div>
@@ -315,7 +323,7 @@
       </div>
     </div>
 
-    <div class="row common-rows" style="margin-top: 3%">
+    <div class="row common-rows pub" style="margin-top: 3%">
       <div class="col-xs-12 custom-col-sm-3 left-column">
         <img src="images/phuma.jpg" alt="phuma" class="paper-images">
       </div>
@@ -344,7 +352,7 @@
       </div>
     </div>
 
-    <div class="row common-rows" style="margin-top: 3%">
+    <div class="row common-rows pub" style="margin-top: 3%">
       <div class="col-xs-12 custom-col-sm-3 left-column">
         <img src="images/simba.gif" alt="simba" class="paper-images">
     </div>
@@ -372,7 +380,7 @@
     </div>
   </div>
 
-    <div class="row common-rows" style="margin-top: 3%">
+    <div class="row common-rows pub pub-selected" style="margin-top: 3%">
         <div class="col-xs-12 custom-col-sm-3 left-column">
           <img src='images/preprint2024dodont.png' alt="preprint2024dodont" class="paper-images">
       </div>
@@ -400,7 +408,7 @@
       </div>
     </div>
 
-    <div class="row common-rows" style="margin-top: 3%">
+    <div class="row common-rows pub" style="margin-top: 3%">
         <div class="col-xs-12 custom-col-sm-3 left-column">
           <img src='images/HnT.png' alt="icml2024hnt" class="paper-images">
       </div>
@@ -427,7 +435,7 @@
       </div>
     </div>
     
-    <div class="row common-rows" style="margin-top: 3%">
+    <div class="row common-rows pub" style="margin-top: 3%">
     <div class="col-xs-12 custom-col-sm-3 left-column">
         <img src='images/icml2024coin.png' alt="icml2024coin" class="paper-images">
     </div>
@@ -450,7 +458,7 @@
     </div>
     </div>
 
-    <div class="row common-rows" style="margin-top: 3%">
+    <div class="row common-rows pub pub-selected" style="margin-top: 3%">
       <div class="col-xs-12 custom-col-sm-3 left-column">
           <img src="images/neurips2023disco-dance.png" alt="neurips2023disco-dance" class="paper-images">
       </div>
@@ -483,7 +491,7 @@
       </div>
       </div>
 
-    <div class="row common-rows" style="margin-top: 3%">
+    <div class="row common-rows pub pub-selected" style="margin-top: 3%">
     <div class="col-xs-12 custom-col-sm-3 left-column">
         <img src='images/neurips2023plastic.png' alt="neurips2023plastic" class="paper-images" style="width:92%">
     </div>
@@ -512,7 +520,7 @@
     </div>
     </div>
 
-    <div class="row common-rows" style="margin-top: 3%">
+    <div class="row common-rows pub" style="margin-top: 3%">
         <div class="col-xs-12 custom-col-sm-3 left-column">
             <img src='images/www2022draftrec.png' alt="www2022draftrec" class="paper-images" style="margin-left:8%; width:95%">
         </div>
@@ -636,6 +644,26 @@
       </div>
     </div>
   </div>
+
+  <script>
+    (function () {
+      var section = document.getElementById('publications');
+      var buttons = section.querySelectorAll('.pub-toggle button');
+      function show(view) {
+        section.setAttribute('data-view', view);
+        for (var i = 0; i < buttons.length; i++) {
+          var on = buttons[i].getAttribute('data-view') === view;
+          buttons[i].setAttribute('aria-pressed', on ? 'true' : 'false');
+        }
+      }
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function () {
+          show(this.getAttribute('data-view'));
+        });
+      }
+      show('selected');
+    })();
+  </script>
 
 </body>
 

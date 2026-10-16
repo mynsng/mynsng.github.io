@@ -297,3 +297,45 @@ span.highlight {
       padding-bottom: 10px;
     }
   }
+
+/* Publications: Selected / All toggle. Without JS the section has no
+   data-view, so every entry stays visible. */
+.pub-heading {
+  align-items: baseline;
+}
+
+.pub-toggle {
+  margin-left: 14px;
+  font-size: 14px;
+  color: #999;
+}
+
+.pub-toggle button {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: #1772d0;
+  cursor: pointer;
+}
+
+.pub-toggle button[aria-pressed="true"] {
+  color: #222;
+  font-weight: 700;
+  cursor: default;
+}
+
+.pub-note {
+  display: none;
+  margin: 0;
+  font-size: 13px;
+  color: #777;
+}
+
+#publications[data-view="selected"] .pub-note {
+  display: block;
+}
+
+#publications[data-view="selected"] .pub:not(.pub-selected) {
+  display: none;
+}
