@@ -1,0 +1,162 @@
+% Build: xelatex or pdflatex Hyunseung_Kim_CV.tex, then copy the PDF to data/Hyunseung_Kim_CV.pdf
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{changepage}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\hypersetup{colorlinks=true,urlcolor=blue!50!black,linkcolor=blue!50!black}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\newlength{\labelw}\setlength{\labelw}{1.15in}
+
+% Section with its label in the left margin column
+\newenvironment{cvsection}[1]
+  {\par\addvspace{14pt}
+   \begin{adjustwidth}{\labelw}{0pt}
+   \noindent\llap{\smash{\parbox[t]{\labelw}{\raggedright\textsc{#1}}}}\ignorespaces}
+  {\end{adjustwidth}}
+
+\newcommand{\entry}[2]{\textbf{#1}\hfill #2\\*}
+\newcommand{\me}{\textbf{Hyunseung Kim}}
+\newcommand{\sub}[1]{\par\medskip\textbf{#1}\par\smallskip}
+\newcommand{\eq}{$^{*}$}
+\newcommand{\adv}{$^{\dagger}$}
+
+\newcounter{pub}
+\newenvironment{pubs}
+  {\begin{list}{[\arabic{pub}]}{\usecounter{pub}\setlength{\leftmargin}{2.2em}\setlength{\itemsep}{4pt}\setlength{\parsep}{0pt}\setlength{\topsep}{2pt}}}
+  {\end{list}}
+\newcommand{\pub}[3]{\item #1\\#2\\\textit{#3}}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\textbf{Hyunseung Kim}}\\[4pt]
+  Homepage: \url{https://mynsng.com}\\
+  Email: \href{mailto:hyunseung.kim@krafton.com}{\texttt{hyunseung.kim@krafton.com}}\\
+  \href{https://scholar.google.com/citations?user=MPwhSxwAAAAJ}{Google Scholar} /
+  \href{https://github.com/mynsng/}{GitHub} /
+  \href{https://www.linkedin.com/in/hyunseung-kim-64b735231/}{LinkedIn}
+\end{center}
+\vspace{-4pt}
+\rule{\linewidth}{1pt}
+
+\begin{cvsection}{Research\\Interests}
+I'm building embodied agents that can reason, adapt, and act autonomously in complex, real-time environments.
+\end{cvsection}
+
+\begin{cvsection}{Education}
+\entry{Ph.D. candidate in Artificial Intelligence}{Mar. 2021 - Present}
+Korea Advanced Institute of Science and Technology (KAIST), Seongnam, Korea\\
+Advisor: Prof. Jaegul Choo\\[4pt]
+\entry{B.S. in Computer Science}{Mar. 2015 - Feb. 2021}
+Korea University, Seoul, Korea
+\end{cvsection}
+
+\begin{cvsection}{Experience}
+\entry{KRAFTON AI}{Aug. 2024 - Present}
+\textit{AI Researcher $\cdot$ AI Companion Team Lead}, mentored by Kangwook Lee
+\begin{itemize}[leftmargin=1.2em,itemsep=1pt,topsep=2pt]
+  \item AI Companion Team Lead \hfill Feb. 2025 - Present
+  \item AI Research Internship \hfill Aug. 2024 - Feb. 2025
+\end{itemize}
+\smallskip
+\textbf{PUBG Ally Project} \quad \textit{Project Lead}\\
+PUBG Ally is the \textbf{world's first in-game AI agent} that can reason, act autonomously,
+and play alongside players as a voice-enabled teammate in a live battle royale game.
+Led the project \textbf{end to end to reach live service}: agent architecture,
+data collection, training, evaluation, and on-device optimization.
+Released to the public as a beta service in June 2026.\\
+\href{https://arxiv.org/abs/2609.29837}{tech report} /
+\href{https://x.com/Kangwook_Lee/status/2067686795882762494}{post} /
+\href{https://www.youtube.com/watch?v=ioG8Ri_eBsU}{video}
+\end{cvsection}
+
+\begin{cvsection}{Publications}
+\eq\ denotes equal contribution, \adv\ denotes equal advising
+
+\sub{Conferences}
+\begin{pubs}
+\pub{All-For-One: Distilling Visual Foundation Models to a Fast, Memory-Efficient Visuomotor Policy}
+    {Byungkun Lee, Minho Park, Hojoon Lee, Dongyoon Hwang, Donghu Kim, \me, Kyungmin Lee, Yunho Kim, Jaegul Choo}
+    {IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), 2027}
+\pub{3D HAMSTER: Bridging Planning and Control in Hierarchical Vision Language Action Models through 3D Trajectory Guidance}
+    {Dongyoon Hwang\eq, Byungkun Lee\eq, Dongjin Kim\eq, Hyojin Jang, Hoiyeong Jin, Jueun Mun, Minho Park, Hojoon Lee, \me, Jaegul Choo}
+    {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2026}
+\pub{PHUMA: Physically Reliable Humanoid Locomotion Dataset}
+    {Kyungmin Lee\eq, Sibeen Kim\eq, Youngdo Lee, Minho Park, \me, Dongyoon Hwang, Donghu Kim, Hojoon Lee, Jaegul Choo}
+    {Conference on Robot Learning (CoRL), 2026 \textup{(Spotlight)}}
+\pub{SimBa: Simplicity Bias for Scaling Up Parameters in Deep Reinforcement Learning}
+    {Hojoon Lee\eq, Dongyoon Hwang\eq, Donghu Kim, \me, Jun Jet Tai, Kaushik Subramanian, Peter R.\ Wurman, Jaegul Choo, Peter Stone, Takuma Seno}
+    {International Conference on Learning Representations (ICLR), 2025 \textup{(Spotlight)}}
+\pub{Do's and Don'ts: Learning Desirable Skills with Instruction Videos}
+    {\me, Byungkun Lee, Hojoon Lee, Dongyoon Hwang, Donghu Kim, Jaegul Choo}
+    {Conference on Neural Information Processing Systems (NeurIPS), 2024}
+\pub{Slow and Steady Wins the Race: Maintaining Plasticity with Hare and Tortoise Networks}
+    {Hojoon Lee, Hyeonseo Cho, \me, Donghu Kim, Dugki Min, Jaegul Choo, Clare Lyle}
+    {International Conference on Machine Learning (ICML), 2024}
+\pub{A Simple Convolution INjector for Vision Transformer: Towards Effective Adaptation in Visuo-Motor Control}
+    {Dongyoon Hwang\eq, Byungkun Lee\eq, Hojoon Lee, \me, Jaegul Choo}
+    {International Conference on Machine Learning (ICML), 2024}
+\pub{DISCO-DANCE: Learning to Discover Skills through Guidance}
+    {\me\eq, Byungkun Lee\eq, Hojoon Lee, Dongyoon Hwang, Sejik Park, Kyushik Min, Jaegul Choo}
+    {Conference on Neural Information Processing Systems (NeurIPS), 2023}
+\pub{PLASTIC: Improving Input and Label Plasticity for Sample Efficient Reinforcement Learning}
+    {Hojoon Lee\eq, Hanseul Cho\eq, \me\eq, Daehoon Gwak, Joonkee Kim, Jaegul Choo, SeYoung Yun, Chulhee Yun}
+    {Conference on Neural Information Processing Systems (NeurIPS), 2023}
+\pub{DraftRec: Personalized Draft Recommendation for Winning in MOBA Games}
+    {Hojoon Lee\eq, Dongyoon Hwang\eq, \me, Byungkun Lee, Jaegul Choo}
+    {The ACM Web Conference (WWW), 2022}
+\end{pubs}
+
+\sub{Workshops}
+\begin{pubs}
+\setcounter{pub}{10}
+\pub{When Agent Responses Shape What Follows: Safety in a Deployed AI Teammate}
+    {Sue Hyun Park, Minkyoung Park, Byeongju Kim, Seohyeon Jung, Youngin Cho, Jimin Hong, \me}
+    {NeurIPS 2026 BiALIGN Workshop \textup{(Oral)}}
+\pub{Aligning Embodied Companion Agent Evaluation with User Experience}
+    {Seohyeon Jung\eq, Sue Hyun Park\eq, Byeongju Kim\eq, Jimin Hong, Youngin Cho, Jaewoong Cho\adv, \me\adv}
+    {NeurIPS 2026 BiALIGN Workshop}
+\end{pubs}
+
+\sub{Technical Reports}
+\begin{pubs}
+\setcounter{pub}{12}
+\pub{PUBG Ally: A Conversational Embodied Agent as an AI Teammate}
+    {PUBG Ally Team. Project leads: Kangwook Lee, \me}
+    {arXiv, 2026}
+\end{pubs}
+\end{cvsection}
+
+\begin{cvsection}{Talks}
+\entry{AI Tech Day 2026, Korea University, Seoul}{Oct. 2026}
+\textit{Toward Fully Autonomous Embodied Agents}\\[3pt]
+\entry{Game Science Forum 2026, Seoul}{Sept. 2026}
+\textit{AI That Plays Games With You: From Play to Learning}\\[3pt]
+\entry{CDEC 2026, Shanghai}{July 2026}
+\textit{From NPCs to Teammates: Building the Next Generation of Game AI}\\[3pt]
+\entry{Sony AI, Game AI Reading Group (online)}{June 2026}
+\textit{PUBG Ally: Building a Co-Playable AI Teammate in PUBG}\\[3pt]
+\entry{GDC 2026, San Francisco}{Mar. 2026}
+\textit{Building a Co-Playable Character: PUBG Ally, an AI Teammate Powered by NVIDIA ACE}, with Evgeny Makarov (NVIDIA)\\[3pt]
+\entry{SNU-CMU HCAI Research Center, Seoul}{Oct. 2025}
+\textit{Building Co-Playable Characters in Games}
+\end{cvsection}
+
+\begin{cvsection}{Awards}
+3rd Place in Computer Science \& Engineering, Samsung Humantech Paper, 2025.\\
+2nd Place, Korea University Graduation Project, 2020, 2021.
+\end{cvsection}
+
+\begin{cvsection}{Reviewing}
+Neural Information Processing Systems (NeurIPS) 2023-2025\\
+International Conference on Machine Learning (ICML) 2024-2025\\
+International Conference on Learning Representations (ICLR) 2024-2025
+\end{cvsection}
+
+\end{document}
